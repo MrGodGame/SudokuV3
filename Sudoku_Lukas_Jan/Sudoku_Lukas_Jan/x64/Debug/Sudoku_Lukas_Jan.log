@@ -1,0 +1,4 @@
+﻿  Spielfeld.cpp
+C:\Users\Jan\Desktop\CodeV2\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(135,29): warning C4477: "fscanf_s": Die Formatzeichenfolge "%i" erfordert ein Argument vom Typ "int *", das variadic-Argument "1" weist aber den Typ "CZelle *" auf.
+C:\Users\Jan\Desktop\CodeV2\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(98): warning C4715: "Spielfeld::checkNeunMal": Nicht alle Codepfade geben einen Wert zurück.
+  Sudoku_Lukas_Jan.vcxproj -> C:\Users\Jan\Desktop\CodeV2\Sudoku_Lukas_Jan\x64\Debug\Sudoku_Lukas_Jan.exe
