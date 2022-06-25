@@ -55,22 +55,17 @@ int CZelle:: getPositionZeile()
 }
 void CZelle::wertEinfuegen(int wertZelle)
 {
-	cout << "Spalte: " << endl
-		<< "Zeile: " << endl;
-	cin >> positionSpalte;
-	cin >> positionZeile;
-	
-	if (checkBelegt() == true)
+	do
 	{
-		cout << "Zelle belegt waehle nochmals!" << endl;
-		wertEinfuegen(wertZelle);
-	}
-	else 
-	{
-		cout << "Welche Zahl möchten sie eingeben: ";
-		cin >> wertZelle;
-	}
-	
+		cout << "Spalte: " << endl
+			<< "Zeile: " << endl;
+		cin >> positionSpalte;
+		cin >> positionZeile;
+
+	} while (checkBelegt() == true);
+
+	cout << "Welche Zahl möchten sie eingeben: ";
+	cin >> wertZelle;
 }
 bool CZelle::checkBelegt()
 {
