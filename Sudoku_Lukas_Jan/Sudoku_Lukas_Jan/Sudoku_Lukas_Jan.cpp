@@ -6,8 +6,6 @@ using namespace std;
 
 int main()
 {
-	Spielfeld Joke;
-	Joke.ausgabeSpielfeld();
 
 	CMenue Menue;
 	Menue.neuesSpiel();

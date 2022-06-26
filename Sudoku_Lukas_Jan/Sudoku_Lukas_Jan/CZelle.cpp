@@ -1,4 +1,5 @@
 #include "CZelle.h"
+#include "Spielfeld.h"
 #include <iostream>
 
 using namespace std;
@@ -53,20 +54,24 @@ int CZelle:: getPositionZeile()
 {
 	return positionZeile;
 }
-void CZelle::wertEinfuegen(int wertZelle)
+void CZelle::wertEinfuegen(CZelle feld[9][9])
 {
 	do
 	{
-		cout << "Spalte: " << endl
-			<< "Zeile: " << endl;
+		cout << "Spalte: " << endl;
 		cin >> positionSpalte;
+		cout << "Zeile: " << endl;
 		cin >> positionZeile;
 
 	} while (checkBelegt() == true);
 
 	cout << "Welche Zahl möchten sie eingeben: ";
 	cin >> wertZelle;
+	feld[positionZeile][positionSpalte].setWertZelle(wertZelle);
+	Spielfeld Joke; 
+	Joke.ausgabeSpielfeld();
 }
+
 bool CZelle::checkBelegt()
 {
 	if (wertZelle > 0)

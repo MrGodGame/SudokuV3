@@ -97,23 +97,23 @@ bool Spielfeld::checkNeunMal(CZelle* feld[9][9], int zahl)
 
 }
 
-bool Spielfeld::checkKasten(CZelle* feld[9][9], int zahl)
-{
-    return false;
-}
-
 void Spielfeld::ausgabeSpielfeld()
 {
-    cout << "asdasdasdasda";
-    CZelle* feld[9][9];
+    system("cls");
+
+    CZelle feld[9][9];
+
     for (int z = 0; z < 9; z++)
     {
         for (int s = 0; s < 9; s++)
         {
-            (feld[z][s])->setWertZelle(0);
-            cout << feld[z][s]->getWertZelle();
+            //(feld[z][s]).setWertZelle(0);
+            cout << feld[z][s].getWertZelle();
         }
+        cout << endl;
     }
+    CZelle Wert;
+    Wert.wertEinfuegen(feld[9][9]);
 }
 
 void Spielfeld::neustarten()

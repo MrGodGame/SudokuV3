@@ -1,4 +1,13 @@
-﻿  Spielfeld.cpp
-C:\Users\Jan\Desktop\CodeV2\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(135,29): warning C4477: "fscanf_s": Die Formatzeichenfolge "%i" erfordert ein Argument vom Typ "int *", das variadic-Argument "1" weist aber den Typ "CZelle *" auf.
-C:\Users\Jan\Desktop\CodeV2\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(98): warning C4715: "Spielfeld::checkNeunMal": Nicht alle Codepfade geben einen Wert zurück.
-  Sudoku_Lukas_Jan.vcxproj -> C:\Users\Jan\Desktop\CodeV2\Sudoku_Lukas_Jan\x64\Debug\Sudoku_Lukas_Jan.exe
+﻿  CAnsammlung.cpp
+  CKasten.cpp
+  CMenue.cpp
+  CReihe.cpp
+  CZelle.cpp
+  Spielfeld.cpp
+C:\Users\Jan\Documents\GitHub\SudokuV3\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(116,34): error C2664: "void CZelle::wertEinfuegen(CZelle [][9])" : Konvertierung von Argument 1 von "CZelle" in "CZelle [][9]" nicht möglich
+C:\Users\Jan\Documents\GitHub\SudokuV3\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(116,33): message : Kein benutzerdefinierter Konvertierungsoperator verfügbar, der diese Konvertierung durchführen kann, oder der Operator kann nicht aufgerufen werden
+C:\Users\Jan\Documents\GitHub\SudokuV3\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\CZelle.h(21,7): message : Siehe Deklaration von "CZelle::wertEinfuegen"
+C:\Users\Jan\Documents\GitHub\SudokuV3\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\Spielfeld.cpp(135,29): warning C4477: "fscanf_s": Die Formatzeichenfolge "%i" erfordert ein Argument vom Typ "int *", das variadic-Argument "1" weist aber den Typ "CZelle *" auf.
+  Sudoku_Lukas_Jan.cpp
+  Code wird generiert...
+C:\Users\Jan\Documents\GitHub\SudokuV3\Sudoku_Lukas_Jan\Sudoku_Lukas_Jan\CMenue.cpp(90): warning C4715: "CMenue::neuesSpiel": Nicht alle Codepfade geben einen Wert zurück.

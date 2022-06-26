@@ -8,8 +8,6 @@ private:
 	int positionZeile;
 
 public:	
-
-
 	CZelle();
 	CZelle(int wertZelle, bool belegt);
 	~CZelle();
@@ -20,7 +18,7 @@ public:
 	int getWertZelle();
 	int getPositionSpalte();
 	int getPositionZeile();
-	void wertEinfuegen(int wertZelle);
+	void wertEinfuegen(CZelle feld[9][9]);
 	bool checkBelegt();
 
 };

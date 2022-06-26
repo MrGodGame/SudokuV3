@@ -1,4 +1,4 @@
-#pragma once
+	#pragma once
 
 class CZelle;
 
@@ -20,7 +20,6 @@ public:
 	bool checkZeile(CZelle* feld[9][9], int zeile, int zahl);
 	bool checkSpalte(CZelle* feld[9][9], int spalte, int zahl);
 	bool checkNeunMal(CZelle* feld[9][9], int zahl);
-	bool checkKasten(CZelle* feld[9][9], int zahl);
 	void ausgabeSpielfeld();
 	void neustarten();
 	void auslesen();

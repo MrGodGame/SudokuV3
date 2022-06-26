@@ -1,4 +1,6 @@
 #include "CMenue.h"
+#include "Spielfeld.h"
+#include "CZelle.h"
 #include <iomanip>
 #include <iostream>
 
@@ -79,7 +81,7 @@ int CMenue:: neuesSpiel()
 	if (Auswahl == 1)
 	{
 		schwierigkeitsAuswahl();
-		cout << 1;
+		cout << 2;
 	}
 	else if (Auswahl == 1)
 	{
@@ -103,7 +105,8 @@ void CMenue::schwierigkeitsAuswahl()
 		cout << "schwierigkeit leicht wurde gewählt" << endl;
 		this->anzahlMoeglicheFelher = 5;
 		cout << "Die Anzahl der Moeglichen Fehler beträgt: " << anzahlMoeglicheFelher << endl;
-		void ausgabeSpielfeld();
+		Spielfeld Joke;
+		Joke.ausgabeSpielfeld();
 	}
 
 	if (schwierigkeit == 2)
