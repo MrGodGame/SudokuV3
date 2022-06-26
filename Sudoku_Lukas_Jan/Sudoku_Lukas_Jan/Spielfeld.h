@@ -16,12 +16,12 @@ public:
 	int getSpalte() { return spalte; }
 	void setZeile();
 	void setSpalte();
-	bool checkWin(CZelle* feld[9][9], int zeile, int zahl);
-	bool checkZeile(CZelle* feld[9][9], int zeile, int zahl);
-	bool checkSpalte(CZelle* feld[9][9], int spalte, int zahl);
-	bool checkNeunMal(CZelle* feld[9][9], int zahl);
-	void ausgabeSpielfeld();
+	bool checkWin(CZelle feld[9][9]);
+	bool checkZeile(CZelle feld[9][9], int zeile, int zahl);
+	bool checkSpalte(CZelle feld[9][9], int spalte, int zahl);
+	bool checkNeunMal(CZelle feld[9][9], int zahl);
+	void ausgabeSpielfeld(CZelle feld[9][9]);
 	void neustarten();
-	void auslesen();
+	void auslesen(int auswahl);
 };
 

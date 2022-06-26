@@ -106,7 +106,8 @@ void CMenue::schwierigkeitsAuswahl()
 		this->anzahlMoeglicheFelher = 5;
 		cout << "Die Anzahl der Moeglichen Fehler beträgt: " << anzahlMoeglicheFelher << endl;
 		Spielfeld Joke;
-		Joke.ausgabeSpielfeld();
+		CZelle feld[9][9];
+		Joke.ausgabeSpielfeld(feld);
 	}
 
 	if (schwierigkeit == 2)

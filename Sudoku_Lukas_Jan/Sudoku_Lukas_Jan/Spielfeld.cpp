@@ -29,14 +29,14 @@ void Spielfeld::setSpalte()
     this->spalte = spalte;
 }
 
-bool Spielfeld::checkWin(CZelle* feld[9][9], int zeile, int zahl)
+bool Spielfeld::checkWin(CZelle feld[9][9])
 {
     int summe = 0;
     for (int z = 0; z < 9; z++)
     {
         for (int s = 0; s < 9; s++)
         {
-            summe = summe + feld[z][s]->getWertZelle();
+            summe = summe + feld[z][s].getWertZelle();
         }
     }
 
@@ -48,11 +48,11 @@ bool Spielfeld::checkWin(CZelle* feld[9][9], int zeile, int zahl)
     return false;
 }
 
-bool Spielfeld::checkZeile(CZelle* feld[9][9], int zeile, int zahl)
+bool Spielfeld::checkZeile(CZelle feld[9][9], int zeile, int zahl)
 {
     for (int i = 0; i < 9; i++)
     {
-        if (zahl == feld[i][zeile]->getWertZelle())
+        if (zahl == feld[i][zeile].getWertZelle())
         {
             return false;
         }
@@ -60,11 +60,11 @@ bool Spielfeld::checkZeile(CZelle* feld[9][9], int zeile, int zahl)
     return true;
 }
 
-bool Spielfeld::checkSpalte(CZelle* feld[9][9], int spalte, int zahl)
+bool Spielfeld::checkSpalte(CZelle feld[9][9], int spalte, int zahl)
 {
     for (int i = 0; i < 9; i++)
     {
-        if (zahl == feld[spalte][i]->getWertZelle())
+        if (zahl == feld[spalte][i].getWertZelle())
         {
             return false;
         }
@@ -72,14 +72,14 @@ bool Spielfeld::checkSpalte(CZelle* feld[9][9], int spalte, int zahl)
     return true;
 }
 
-bool Spielfeld::checkNeunMal(CZelle* feld[9][9], int zahl)
+bool Spielfeld::checkNeunMal(CZelle feld[9][9], int zahl)
 {
     int summe = 0;
     for (int z = 0; z < 9; z++)
     {
         for (int s = 0; s < 9; s++)
         {
-            if (zahl == feld[z][s]->getWertZelle())
+            if (zahl == feld[z][s].getWertZelle())
             {
                 summe++;
             }
@@ -97,23 +97,33 @@ bool Spielfeld::checkNeunMal(CZelle* feld[9][9], int zahl)
 
 }
 
-void Spielfeld::ausgabeSpielfeld()
+void Spielfeld::ausgabeSpielfeld(CZelle feld[9][9])
 {
     system("cls");
 
-    CZelle feld[9][9];
+    (feld[0][0]).setWertZelle(4);
+    (feld[0][1]).setWertZelle(4);
+    (feld[0][2]).setWertZelle(4);
+    (feld[0][3]).setWertZelle(4);
+    (feld[0][4]).setWertZelle(4);
+    (feld[0][5]).setWertZelle(4);
+    (feld[0][6]).setWertZelle(4);
+    (feld[0][7]).setWertZelle(4);
+    (feld[0][8]).setWertZelle(4);
 
     for (int z = 0; z < 9; z++)
     {
         for (int s = 0; s < 9; s++)
         {
-            //(feld[z][s]).setWertZelle(0);
             cout << feld[z][s].getWertZelle();
         }
         cout << endl;
     }
+
+
+    checkWin(feld);
     CZelle Wert;
-    Wert.wertEinfuegen(feld[9][9]);
+    Wert.wertEinfuegen(feld);
 }
 
 void Spielfeld::neustarten()
@@ -123,7 +133,7 @@ void Spielfeld::neustarten()
 
 }
 
-void Spielfeld::auslesen()
+void Spielfeld::auslesen(int auswahl)
 {
     FILE* datei;
     int z = 0, s = 0;

@@ -67,9 +67,17 @@ void CZelle::wertEinfuegen(CZelle feld[9][9])
 
 	cout << "Welche Zahl möchten sie eingeben: ";
 	cin >> wertZelle;
-	feld[positionZeile][positionSpalte].setWertZelle(wertZelle);
 	Spielfeld Joke; 
-	Joke.ausgabeSpielfeld();
+	if (Joke.checkNeunMal(feld, wertZelle) == true)
+	{
+		feld[positionZeile-1][positionSpalte-1].setWertZelle(wertZelle);	
+		cout << feld[positionZeile-1][positionSpalte-1].getWertZelle();
+		Joke.ausgabeSpielfeld(feld);
+	}
+	else
+	{
+		wertEinfuegen(feld);
+	}
 }
 
 bool CZelle::checkBelegt()
